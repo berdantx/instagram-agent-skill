@@ -9,6 +9,14 @@
     "If the hook would work for anyone else in your niche, it is not your hook. Put the thing only you can say in it.",
     "A hook promises something. Deliver it before the halfway mark or the retention you bought gets handed back."
   ],
+  "rules_pt": [
+    "Escreve a fala e o texto da tela separados. Na tela vai a versão mais curta e mais seca, no máximo seis palavras, sem pontuação que não precisa.",
+    "Sem introdução. O vídeo começa na frase que você normalmente só falaria no sexto segundo.",
+    "Fala o número. 'Muito' não é número, e 'um tempão' também não.",
+    "O primeiro frame também é gancho. Você parado falando no 0:00, sem movimento e sem texto, são três ganchos jogados fora.",
+    "Se o gancho serviria pra qualquer outra pessoa do seu nicho, ele não é seu. Coloca nele a coisa que só você pode dizer.",
+    "Gancho é promessa. Entrega antes da metade do vídeo, senão a retenção que você conquistou vai embora."
+  ],
   "hooks": [
     {
       "id": 1,
@@ -18,7 +26,16 @@
       "on_screen": "$18,000 MISTAKE",
       "best_for": "Trust, fast. People finish the videos where you are the one who looks bad.",
       "trap": "A fake cost. 'It cost me my peace of mind' is not a number and everybody can hear that.",
-      "match": "\\$\\s?\\d[\\d,]*\\s+(?:is|was) what\\b|\\bcost (?:me|us|him|her|them)\\b|\\blost\\b[^.!?]{0,20}\\$\\s?\\d"
+      "match": "\\$\\s?\\d[\\d,]*\\s+(?:is|was) what\\b|\\bcost (?:me|us|him|her|them)\\b|\\blost\\b[^.!?]{0,20}\\$\\s?\\d",
+      "pt": {
+        "name": "Confissão de Custo",
+        "template": "{Valor exato} foi o que {um erro} me custou.",
+        "example": "R$ 18 mil foi o que uma cláusula que faltou no contrato me custou.",
+        "on_screen": "ERRO DE R$ 18 MIL",
+        "best_for": "Confiança rápido. A galera assiste até o fim os vídeos em que quem se dá mal é você.",
+        "trap": "Custo de mentira. 'Me custou minha paz' não é número, e todo mundo percebe.",
+        "match": "\\b(?:me|nos|lhe) custou\\b|\\bcustou (?:caro|R\\$|\\d)|\\b(?:perdi|perdemos|queimei|torrei|joguei fora|rasguei)\\b[^.!?]{0,30}(?:R\\$\\s?\\d[\\d.,]*|\\bmil\\b|\\breais\\b|\\bcontos?\\b|\\bpila\\b)|(?:R\\$\\s?\\d[\\d.,]*|\\bmil(?: reais)?|\\breais|\\bcontos?)\\s+(?:foi|é|e) (?:o (?:que|quanto)|isso que|quanto)\\b"
+      }
     },
     {
       "id": 2,
@@ -28,7 +45,16 @@
       "on_screen": "STOP POSTING DAILY",
       "best_for": "Saves and arguments. The imperative gets attention that a statement does not.",
       "trap": "Telling people to stop doing something nobody does. The habit has to be one the viewer recognises in themselves.",
-      "match": "^\\s*(?:stop|quit|never|don'?t|dont|please)\\b[^.!?]{0,30}\\b(?:do|be|make|buy|use|start|say|post|send|take|charge)?\\b|\\b(?:do not|don'?t|dont|never) (?:do|be|make|buy|use|start|say|post|take)\\b|\\bquit your\\b"
+      "match": "^\\s*(?:stop|quit|never|don'?t|dont|please)\\b[^.!?]{0,30}\\b(?:do|be|make|buy|use|start|say|post|send|take|charge)?\\b|\\b(?:do not|don'?t|dont|never) (?:do|be|make|buy|use|start|say|post|take)\\b|\\bquit your\\b",
+      "pt": {
+        "name": "Comando Negativo",
+        "template": "Para de {hábito comum}. Faz {alternativa} no lugar.",
+        "example": "Para de postar três vezes por dia. Posta duas e responde todo comentário durante uma hora.",
+        "on_screen": "PARA DE POSTAR TODO DIA",
+        "best_for": "Salvamento e discussão. Uma ordem chama mais atenção do que uma afirmação.",
+        "trap": "Mandar parar uma coisa que ninguém faz. O hábito tem que ser um que a pessoa reconhece nela mesma.",
+        "match": "^\\s*(?:(?:gente|cara|galera|olha),?\\s+)?(?:para|pare|parem|chega)\\s+de\\b|^\\s*(?:nunca|n[aã]o)\\s+(?:mais\\s+)?(?:fa[cç]a|fa[zç]|poste|posta|use|usa|compre|compra|mande|manda|envie|cobre|cobra|comece|come[cç]a|diga|grave|contrate|fale|aceite|aceita)\\b|^\\s*esque[cç]a\\b|^\\s*esquece (?:isso|esse|essa|o|a)\\b"
+      }
     },
     {
       "id": 3,
@@ -38,7 +64,16 @@
       "on_screen": "YOUR FIRST 30 WILL FLOP",
       "best_for": "New audiences. It positions you as the person who says the quiet part.",
       "trap": "Picking a truth everybody already says. If the comments are agreeing before you finish, it was not a secret.",
-      "match": "\\b(?:nobody|no one|nobody ever)\\s+(?:ever\\s+)?(?:tells|told|talks|talked|says|said|mentions|teaches)\\b|\\bwhat (?:nobody|no one) (?:tells|says)\\b"
+      "match": "\\b(?:nobody|no one|nobody ever)\\s+(?:ever\\s+)?(?:tells|told|talks|talked|says|said|mentions|teaches)\\b|\\bwhat (?:nobody|no one) (?:tells|says)\\b",
+      "pt": {
+        "name": "Ninguém Te Conta",
+        "template": "Ninguém te conta que {verdade desconfortável sobre o que a pessoa quer}.",
+        "example": "Ninguém te conta que os seus primeiros 30 reels são pra flopar mesmo.",
+        "on_screen": "SEUS PRIMEIROS 30 VÃO FLOPAR",
+        "best_for": "Público novo. Te coloca como a pessoa que fala o que todo mundo pensa e ninguém diz.",
+        "trap": "Escolher uma verdade que todo mundo já fala. Se os comentários concordam antes de você terminar, não era segredo.",
+        "match": "\\bningu[eé]m\\s+(?:nunca\\s+)?(?:te\\s+|nos\\s+|me\\s+|vai\\s+te\\s+|vai\\s+)?(?:t[aá]\\s+)?(?:conta|contou|contando|fala|falou|falando|diz|disse|avisa|avisou|ensina|ensinou|explica|comenta|mostra|mostrou)\\b|^\\s*o que ningu[eé]m\\b"
+      }
     },
     {
       "id": 4,
@@ -48,7 +83,16 @@
       "on_screen": "$2,000 -> $12",
       "best_for": "Demos and tool videos. The price gap does the work.",
       "trap": "Overstating the replacement. If it replaced 60% of the job, say 60%, or the comments will say it for you.",
-      "match": "\\breplaced?\\b[^.!?]*\\$\\s?\\d|\\$\\s?\\d[^.!?]*\\breplaced?\\b|\\binstead of (?:paying|hiring)\\b"
+      "match": "\\breplaced?\\b[^.!?]*\\$\\s?\\d|\\$\\s?\\d[^.!?]*\\breplaced?\\b|\\binstead of (?:paying|hiring)\\b",
+      "pt": {
+        "name": "A Substituição",
+        "template": "{Essa coisa} substituiu {coisa cara} por {preço}.",
+        "example": "Essa ferramenta de R$ 60 substituiu o editor que eu pagava R$ 4 mil por mês.",
+        "on_screen": "R$ 4.000 -> R$ 60",
+        "best_for": "Demo e vídeo de ferramenta. A diferença de preço faz o trabalho sozinha.",
+        "trap": "Exagerar a troca. Se substituiu 60% do trabalho, fala 60%, senão os comentários falam por você.",
+        "match": "\\bsubstitu[ií]\\w*\\b[^.!?]{0,60}(?:(?:R\\$\\s?\\d[\\d.,]*|\\bmil\\b|\\breais\\b|\\bcontos?\\b|\\bpila\\b)|\\bpagava\\b)|(?:R\\$\\s?\\d|\\breais\\b|\\bmil\\b)[^.!?]{0,40}\\bsubstitu|\\b(?:em vez|ao inv[eé]s) de (?:pagar|contratar)\\b|\\bparei de pagar\\b|\\btroquei\\b[^.!?]{0,40}(?:R\\$\\s?\\d[\\d.,]*|\\bmil\\b|\\breais\\b|\\bcontos?\\b|\\bpila\\b)"
+      }
     },
     {
       "id": 5,
@@ -58,7 +102,16 @@
       "on_screen": "5 HOURS -> 20 MIN",
       "best_for": "Process videos where the payoff is speed. Reads instantly on screen.",
       "trap": "A ratio nobody believes. 40 hours to 4 seconds gets treated as a lie even when it is true.",
-      "match": "\\bused to take\\b|\\bnow (?:it )?(?:only )?takes?\\b|\\btakes? (?:me )?\\d+\\s*(?:sec|second|min|minute|hour|hr)"
+      "match": "\\bused to take\\b|\\bnow (?:it )?(?:only )?takes?\\b|\\btakes? (?:me )?\\d+\\s*(?:sec|second|min|minute|hour|hr)",
+      "pt": {
+        "name": "Tempo Encolhido",
+        "template": "Isso me tomava {muito tempo}. Hoje leva {pouco tempo}.",
+        "example": "Proposta comercial me tomava cinco horas. Hoje eu faço em vinte minutos.",
+        "on_screen": "5 HORAS -> 20 MIN",
+        "best_for": "Vídeo de processo em que o ganho é velocidade. Na tela a pessoa entende na hora.",
+        "trap": "Uma proporção que ninguém acredita. De 40 horas pra 4 segundos soa mentira mesmo quando é verdade.",
+        "match": "\\b(?:levava|demorava|gastava|tomava|perdia)\\b[^.!?]{0,40}\\b(?:horas?|dias?|semanas?|minutos?|tardes?|manh[aã]s?)\\b|\\b(?:hoje|agora)\\s+(?:eu\\s+|isso\\s+|s[oó]\\s+)?(?:leva|levo|demora|demoro|fa[cç]o em|resolvo em|termino em)\\b|\\bde\\s+(?:\\d+|um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|onze|doze|quinze|vinte|trinta|quarenta|cinquenta|sessenta|noventa|cem)\\s+(?:horas?|dias?)\\s+pra\\s+(?:\\d+|um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|onze|doze|quinze|vinte|trinta|quarenta|cinquenta|sessenta|noventa|cem)\\s+minutos?\\b"
+      }
     },
     {
       "id": 6,
@@ -68,7 +121,16 @@
       "on_screen": "60 DAYS. REAL NUMBERS.",
       "best_for": "Experiments. Pairs with a screen recording of the real dashboard, which is the whole value.",
       "trap": "Not showing the screen. A numbers video with no screen recording is a numbers claim.",
-      "match": "\\bi\\s+\\w+(?:ed)?\\s+[^.!?]{0,30}\\bfor\\s+\\d+\\s+(?:days?|weeks?|months?|years?)\\b|\\bhere (?:are|is) (?:the|my)\\b[^.!?]*\\bnumbers\\b|\\bwe(?:'ll| will)? do \\$\\s?\\d"
+      "match": "\\bi\\s+\\w+(?:ed)?\\s+[^.!?]{0,30}\\bfor\\s+\\d+\\s+(?:days?|weeks?|months?|years?)\\b|\\bhere (?:are|is) (?:the|my)\\b[^.!?]*\\bnumbers\\b|\\bwe(?:'ll| will)? do \\$\\s?\\d",
+      "pt": {
+        "name": "O Recibo",
+        "template": "Eu {fiz tal coisa} por {N dias}. Aqui estão os números de verdade.",
+        "example": "Postei um reels por dia durante 60 dias. Olha o que isso fez com o meu direct.",
+        "on_screen": "60 DIAS. NÚMEROS REAIS.",
+        "best_for": "Experimento. Combina com a gravação de tela do painel de verdade, que é todo o valor do vídeo.",
+        "trap": "Não mostrar a tela. Vídeo de número sem gravação de tela é só alguém falando um número.",
+        "match": "\\b(?:durante|por)\\s+(?:\\d+|um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|onze|doze|quinze|vinte|trinta|quarenta|cinquenta|sessenta|noventa|cem)\\s+(?:dias|semanas|meses)\\b(?!\\s+(?:atr[aá]s|seguidos de))|\\b(?:aqui\\s+(?:est[aã]o|t[aã]o|vai)|olha|esses\\s+s[aã]o|vou\\s+(?:te\\s+)?mostrar)\\s+(?:os|meus|todos os)\\s+n[uú]meros\\b|\\bn[uú]meros reais\\b|\\bn[uú]meros de verdade\\b|\\b(?:faturei|faturamos|vendi|vendemos|lucrei)\\b[^.!?]{0,40}\\b(?:em|nos?) (?:\\d+|um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|quinze|trinta) (?:dias?|semanas?|meses|m[eê]s|anos?)\\b"
+      }
     },
     {
       "id": 7,
@@ -78,7 +140,16 @@
       "on_screen": "YOUR CAPTIONS ARE CUT",
       "best_for": "Teaching. The 'not your fault' half stops it reading as an insult, which is what kills this one.",
       "trap": "Skipping the absolution. 'You are doing it wrong' on its own makes people leave rather than learn.",
-      "match": "\\b(?:big(?:gest)?|common|the) mistake\\b|\\bmistake (?:that|people|i)\\b|\\byou'?(?:re| are) doing\\b[^.!?]*\\bwrong\\b|\\bdoing (?:it|this) wrong\\b"
+      "match": "\\b(?:big(?:gest)?|common|the) mistake\\b|\\bmistake (?:that|people|i)\\b|\\byou'?(?:re| are) doing\\b[^.!?]*\\bwrong\\b|\\bdoing (?:it|this) wrong\\b",
+      "pt": {
+        "name": "Jeito Errado, Jeito Certo",
+        "template": "Você tá fazendo {coisa} errado, e a culpa não é sua. {A correção}.",
+        "example": "Você tá escrevendo legenda errado, e a culpa não é sua. O Instagram esconde tudo depois da primeira linha.",
+        "on_screen": "SUA LEGENDA TÁ CORTADA",
+        "best_for": "Ensinar. A parte do 'a culpa não é sua' impede que soe como ofensa, que é o que mata esse formato.",
+        "trap": "Pular a absolvição. 'Você tá fazendo errado' sozinho faz a pessoa ir embora em vez de aprender.",
+        "match": "\\b(?:t[aá]|est[aá]|t[aã]o|est[aã]o)\\s+\\w+ndo\\b[^.!?]{0,40}\\berrad[oa]s?\\b|\\bo\\s+(?:maior|principal|primeiro|pior)\\s+erro\\b|\\berro\\s+(?:que|mais comum|n[uú]mero um)\\b|\\b(?:jeito|forma|maneira)\\s+errad[ao]\\b|\\ba culpa n[aã]o [eé] (?:sua|tua|de voc[eê])\\b"
+      }
     },
     {
       "id": 8,
@@ -88,7 +159,16 @@
       "on_screen": "6 YEARS INSIDE",
       "best_for": "Authority without a credential slide. Works only if the years are real.",
       "trap": "Promising a secret and delivering the brochure. The comments are merciless about this one.",
-      "match": "\\bi (?:spent|worked|ran|was|have been)\\b[^.!?]*\\b\\d+\\s*\\+?\\s*years?\\b|\\bwe never (?:told|said|showed)\\b|\\bnobody (?:puts|tells you about)\\b|\\bi (?:sell|sold|run)\\b[^.!?]*\\$\\s?\\d"
+      "match": "\\bi (?:spent|worked|ran|was|have been)\\b[^.!?]*\\b\\d+\\s*\\+?\\s*years?\\b|\\bwe never (?:told|said|showed)\\b|\\bnobody (?:puts|tells you about)\\b|\\bi (?:sell|sold|run)\\b[^.!?]*\\$\\s?\\d",
+      "pt": {
+        "name": "Bastidor",
+        "template": "Passei {N anos} {dentro da coisa}. Vou te contar o que a gente nunca falava em voz alta.",
+        "example": "Passei seis anos vendendo contrato de agência. Vou te contar o que a gente nunca colocava na proposta.",
+        "on_screen": "6 ANOS LÁ DENTRO",
+        "best_for": "Autoridade sem slide de currículo. Só funciona se os anos forem reais.",
+        "trap": "Prometer um segredo e entregar o folder da empresa. Os comentários não perdoam esse.",
+        "match": "\\b(?:trabalhei|passei|fiquei|fui|atuei)\\b[^.!?]{0,50}\\b(?:\\d+|um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|onze|doze|quinze|vinte|trinta|quarenta|cinquenta|sessenta|noventa|cem)\\s+anos\\b|\\bh[aá]\\s+(?:\\d+|um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|onze|doze|quinze|vinte|trinta|quarenta|cinquenta|sessenta|noventa|cem)\\s+anos\\s+(?:no|na|nesse|nessa|dentro|trabalhando|atuando)\\b|\\b(?:a gente|n[oó]s)\\s+nunca\\s+(?:contava|contou|falava|falou|mostrava|mostrou|dizia|colocava|admitia)\\b|\\b(?:bastidores?|por tr[aá]s das c[aâ]meras)\\s+d[aoe]s?\\b"
+      }
     },
     {
       "id": 9,
@@ -98,7 +178,16 @@
       "on_screen": "STEAL THIS",
       "best_for": "Saves and sends, which are the two metrics that move reach the most.",
       "trap": "The artifact not being on screen. If they cannot screenshot it, there is nothing to steal.",
-      "match": "^\\s*steal\\b|\\bsteal (?:this|these|my)\\b|^\\s*(?:here'?s|this is) (?:the|my) (?:exact|literal)\\b"
+      "match": "^\\s*steal\\b|\\bsteal (?:this|these|my)\\b|^\\s*(?:here'?s|this is) (?:the|my) (?:exact|literal)\\b",
+      "pt": {
+        "name": "Rouba Isso",
+        "template": "Rouba esse {material}. Levei {tempo} pra acertar.",
+        "example": "Rouba essa mensagem de follow-up de quatro linhas. Levei dois anos e muito lead perdido pra chegar nela.",
+        "on_screen": "ROUBA ISSO",
+        "best_for": "Salvamento e compartilhamento, as duas métricas que mais mexem no alcance.",
+        "trap": "O material não aparecer na tela. Se não dá pra tirar print, não tem nada pra roubar.",
+        "match": "^\\s*(?:rouba|roube|copia|copie)\\b|\\b(?:rouba|roube|roubar|copia|copie|copiar|pega|pegue)\\s+(?:esse|essa|esses|essas|isso|meu|minha|meus|minhas)\\s+(?:roteiro|script|modelo|template|mensagem|prompt|planilha|legenda|texto|copy|frase|checklist|isso)?|\\bpode\\s+(?:roubar|copiar)\\b|^\\s*(?:aqui|esse)\\s+(?:[eé]|t[aá])\\s+o\\s+(?:meu\\s+)?(?:roteiro|script|modelo|prompt)\\s+exato\\b"
+      }
     },
     {
       "id": 10,
@@ -108,7 +197,16 @@
       "on_screen": "VIEWS BUT NO FOLLOWERS?",
       "best_for": "Qualifying hard. Fewer people stay, and the ones who do are the ones who buy.",
       "trap": "A situation so broad it qualifies nobody. 'If you want to grow' is not a situation.",
-      "match": "^\\s*if (?:you|i|we|your|my|they)\\b"
+      "match": "^\\s*if (?:you|i|we|your|my|they)\\b",
+      "pt": {
+        "name": "Se Isso, Então Assista",
+        "template": "Se {situação específica}, os próximos {tempo curto} resolvem.",
+        "example": "Se os seus reels têm view e não trazem seguidor, os próximos 40 segundos resolvem isso.",
+        "on_screen": "VIEW SEM SEGUIDOR?",
+        "best_for": "Filtrar forte. Fica menos gente, e quem fica é quem compra.",
+        "trap": "Uma situação tão ampla que não filtra ninguém. 'Se você quer crescer' não é situação.",
+        "match": "^\\s*(?:(?:gente|olha|cara),?\\s+)?se\\s+(?:voc[eê]s?|vc|c[eê]|tu|eu|a gente|o\\s+seu|a\\s+sua|os\\s+seus|as\\s+suas|seus?|suas?|teus?|tuas?)\\b"
+      }
     },
     {
       "id": 11,
@@ -118,7 +216,16 @@
       "on_screen": "5 EDITS. #4 IS THE ONE.",
       "best_for": "Retention through the middle: naming a favourite gives people a reason to stay past three.",
       "trap": "N above seven. Nobody believes you have nine good ones, and you do not.",
-      "match": "^\\s*(?:here are\\s+)?\\d+\\s+\\w+|\\bnumber \\d+\\b|\\b(?:three|four|five|seven|ten)\\s+\\w+\\s+(?:every|that|you)\\b"
+      "match": "^\\s*(?:here are\\s+)?\\d+\\s+\\w+|\\bnumber \\d+\\b|\\b(?:three|four|five|seven|ten)\\s+\\w+\\s+(?:every|that|you)\\b",
+      "pt": {
+        "name": "Lista Com Favorito",
+        "template": "{N} {coisas} que {resultado}. A número {k} é a que ninguém usa.",
+        "example": "Cinco ajustes na legenda que dobram seus salvamentos. A número quatro é a que ninguém faz.",
+        "on_screen": "5 AJUSTES. FICA PRO 4.",
+        "best_for": "Segurar retenção no meio: ter um favorito dá motivo pra pessoa passar do terceiro item.",
+        "trap": "N acima de sete. Ninguém acredita que você tem nove bons, e você não tem.",
+        "match": "\\b(?:o|a)\\s+n[uú]mero\\s+(?:\\d+|um|dois|duas|tr[eê]s|quatro|cinco|seis|sete)\\b|^\\s*(?:\\d+|duas|dois|tr[eê]s|quatro|cinco|seis|sete|oito|dez)\\s+(?:coisas|jeitos|formas|maneiras|dicas|erros|ferramentas|apps?|aplicativos|livros|h[aá]bitos|sinais|motivos|passos|truques|ideias|ajustes|perguntas|frases|segredos|ganchos|estrat[eé]gias|sites|IAs)\\b"
+      }
     },
     {
       "id": 12,
@@ -128,7 +235,16 @@
       "on_screen": "\"I HATE BEING ON CAMERA\"",
       "best_for": "Selling to the people who already said no once.",
       "trap": "Inventing the objection. Pull it verbatim from a DM or a comment, including the bad grammar.",
-      "match": "^\\s*[\\\"“'][^\\\"”']{5,120}[\\\"”'][,.]?\\s*(?:fine|ok|okay|sure|right|here)"
+      "match": "^\\s*[\\\"“'][^\\\"”']{5,120}[\\\"”'][,.]?\\s*(?:fine|ok|okay|sure|right|here)",
+      "pt": {
+        "name": "A Objeção",
+        "template": "\"{Objeção que a pessoa fala de verdade}.\" Beleza. Aqui vai a versão que funciona mesmo assim.",
+        "example": "\"Eu não quero aparecer na câmera.\" Beleza. Aqui vai a versão sem rosto que ainda vende.",
+        "on_screen": "\"ODEIO APARECER NA CÂMERA\"",
+        "best_for": "Vender pra quem já disse não uma vez.",
+        "trap": "Inventar a objeção. Copia ela palavra por palavra de um direct ou de um comentário, com o português errado e tudo.",
+        "match": "^\\s*[\\\"“'][^\\\"”']{5,120}[\\\"”'][,.]?\\s*(?:beleza|t[aá] bom|tudo bem|ok|certo|ent[aã]o|olha|justo|entendo|fechou)|^\\s*[\\\"“']?ah,?\\s+mas\\s+(?:eu|eu n[aã]o|n[aã]o|[eé] caro|n[aã]o tenho)\\b"
+      }
     },
     {
       "id": 13,
@@ -138,7 +254,16 @@
       "on_screen": "MARCH  /  NOW",
       "best_for": "Anything visual. The cut between the two frames is the hook, the words are secondary.",
       "trap": "Three levers. Name one thing that changed or the transformation stops being believable.",
-      "match": "\\b(?:this|that) was\\b[^.!?]*[.!?]\\s*(?:this|that) is\\b|\\bbefore\\b[^.!?]*\\bafter\\b|\\bi (?:look|looked) back at\\b"
+      "match": "\\b(?:this|that) was\\b[^.!?]*[.!?]\\s*(?:this|that) is\\b|\\bbefore\\b[^.!?]*\\bafter\\b|\\bi (?:look|looked) back at\\b",
+      "pt": {
+        "name": "Antes e Depois na Tela",
+        "template": "{Mostra o antigo}. {Mostra o novo}. {Uma frase sobre o que mudou}.",
+        "example": "Esse era meu perfil em março. Esse é ele hoje. Mudei só o campo do nome, mais nada.",
+        "on_screen": "MARÇO  /  HOJE",
+        "best_for": "Qualquer coisa visual. O corte entre as duas imagens é o gancho, o texto vem depois.",
+        "trap": "Três mudanças. Fala de uma coisa só que mudou, senão a transformação deixa de ser crível.",
+        "match": "\\b(?:ess[ea]|isso|assim|aqui)\\s+era\\b.{0,80}?\\b(?:ess[ea]|isso|assim|aqui)\\s+(?:[eé]|t[aá]|ficou|fica)\\b|\\bantes\\b[^.!?]{0,40}\\bdepois\\b|\\bolha como (?:era|tava|estava|ficou)\\b"
+      }
     },
     {
       "id": 14,
@@ -148,7 +273,16 @@
       "on_screen": "PHOTOGRAPHERS UNDER $2K",
       "best_for": "Cutting a broad audience down to the one that converts. Send rate goes up because people tag each other.",
       "trap": "A group so large it is not a callout. 'Entrepreneurs' is not a group.",
-      "match": "^\\s*(?:every|all|any)\\s+\\w+|^\\s*[a-z][\\w ]{2,28}(?:ers|ists|ors|ants)\\b\\s*[,:]|^\\s*for (?:viewers|people|anyone|those|everyone)\\b|^\\s*(?:attention|listen up)\\b"
+      "match": "^\\s*(?:every|all|any)\\s+\\w+|^\\s*[a-z][\\w ]{2,28}(?:ers|ists|ors|ants)\\b\\s*[,:]|^\\s*for (?:viewers|people|anyone|those|everyone)\\b|^\\s*(?:attention|listen up)\\b",
+      "pt": {
+        "name": "O Chamado",
+        "template": "{Grupo específico}, esse é o vídeo que você tá evitando.",
+        "example": "Fotógrafo que cobra menos de R$ 2 mil por ensaio: essa é a página de preço que você tá evitando.",
+        "on_screen": "FOTÓGRAFO ABAIXO DE R$ 2 MIL",
+        "best_for": "Cortar um público grande até sobrar o que converte. O envio sobe porque as pessoas marcam umas às outras.",
+        "trap": "Um grupo tão grande que não chama ninguém. 'Empreendedor' não é grupo.",
+        "match": "^\\s*(?:voc[eê]|vc|c[eê])\\s+que\\b|\\b(?:esse|este)\\s+v[ií]deo\\s+[eé]\\s+(?:pra|para|s[oó] pra)\\s+(?:voc[eê]s?|vc|c[eê]|quem)\\b|^\\s*(?:aten[cç][aã]o|al[oô])\\b|^\\s*(?:\\w+\\s+){1,2}que\\s+(?:cobra|cobram|vende|vendem|trabalha|trabalham|atende|atendem|ainda|vive|vivem)\\b|^\\s*(?:todo|toda|todos|todas)\\s+(?:\\w+\\s+)?que\\b"
+      }
     },
     {
       "id": 15,
@@ -158,7 +292,16 @@
       "on_screen": "47 FLOPS, THEN THIS",
       "best_for": "People at the start, which is most of the audience. High comment rate.",
       "trap": "Making the change sound like luck. If the answer is 'I got lucky', there is no video.",
-      "match": "\\bmy first\\s+\\d+\\b|\\bfirst\\s+\\d+\\s+(?:reels?|videos?|posts?|clients?|months?)\\b"
+      "match": "\\bmy first\\s+\\d+\\b|\\bfirst\\s+\\d+\\s+(?:reels?|videos?|posts?|clients?|months?)\\b",
+      "pt": {
+        "name": "Histórico de Fracasso",
+        "template": "Meus primeiros {N} {tentativas} não deram em nada. Olha o que mudou no {N+1}.",
+        "example": "Meus primeiros 47 reels tiveram média de 300 views. O 48 fez 400 mil. Só uma coisa foi diferente.",
+        "on_screen": "47 FLOPS, AÍ VEIO ESSE",
+        "best_for": "Quem tá começando, que é a maior parte do público. Rende muito comentário.",
+        "trap": "Fazer a mudança parecer sorte. Se a resposta é 'dei sorte', não tem vídeo.",
+        "match": "\\b(?:meus|minhas|os|as)\\s+primeir[oa]s\\s+(?:\\d+|\\w+)\\s+(?:reels?|v[ií]deos?|posts?|clientes?|meses|lan[cç]amentos?|vendas?|anos|tentativas)\\b|\\b(?:postei|gravei|lancei)\\b[^.!?]{0,40}\\b(?:e\\s+)?(?:nenhum|nada|zero)\\b|\\bmeu primeiro (?:lan[cç]amento|reels?|v[ií]deo|cliente|curso|produto|post)\\b[^.!?]{0,40}\\b(?:zero|nada|ningu[eé]m|flopou|fracassou|deu errado)\\b"
+      }
     },
     {
       "id": 16,
@@ -168,7 +311,16 @@
       "on_screen": "ASKED EVERY WEEK",
       "best_for": "Search. A question typed the way people type it is what Instagram search is matching against.",
       "trap": "Tidying the question up. The value is that it is in their words, typos and all.",
-      "match": "^\\s*[\\\"“']?(?:how|what|what'?s|why|when|where|who|which|can|should|do|does|did|is|are|have you|would you)\\b[^?]{3,110}\\?"
+      "match": "^\\s*[\\\"“']?(?:how|what|what'?s|why|when|where|who|which|can|should|do|does|did|is|are|have you|would you)\\b[^?]{3,110}\\?",
+      "pt": {
+        "name": "A Pergunta Literal",
+        "template": "\"{Pergunta exatamente como foi feita}\" Recebo essa pergunta toda semana.",
+        "example": "\"Como eu posto todo dia sem odiar isso?\" Recebo essa pergunta toda semana.",
+        "on_screen": "ME PERGUNTAM TODA SEMANA",
+        "best_for": "Busca. Uma pergunta escrita do jeito que as pessoas digitam é o que a busca do Instagram procura.",
+        "trap": "Arrumar a pergunta. O valor tá em estar nas palavras delas, com erro de digitação e tudo.",
+        "match": "^\\s*[\\\"“']?(?:como|o que|que|por ?que|quando|onde|quem|qual|quais|quanto|d[aá] pra|vale a pena|tem como|[eé] poss[ií]vel)\\b[^?]{3,110}\\?|\\b(?:recebo|recebi|vivo recebendo)\\s+(?:essa|esta)\\s+pergunta\\b|\\b(?:sempre|todo dia|toda semana|todo mundo|v[aã]o|vivem)\\s+me\\s+pergunta(?:m|ndo|r)?\\b|\\bme\\s+perguntaram\\b|\\bme\\s+perguntam\\b"
+      }
     },
     {
       "id": 17,
@@ -178,7 +330,16 @@
       "on_screen": "CAROUSELS vs REELS",
       "best_for": "Comments. People arrive already holding an opinion, which is the point.",
       "trap": "Refusing to pick. A comparison with a diplomatic ending is a video with no ending.",
-      "match": "\\b(?:vs\\.?|versus)\\b|\\bdifferences? between\\b|\\b(?:a|the) or (?:b|the)\\b"
+      "match": "\\b(?:vs\\.?|versus)\\b|\\bdifferences? between\\b|\\b(?:a|the) or (?:b|the)\\b",
+      "pt": {
+        "name": "Frente a Frente",
+        "template": "{A} ou {B}. Testei os dois por {tempo} e não teve nem comparação.",
+        "example": "Carrossel ou reels. Testei os dois por 90 dias e não teve nem comparação.",
+        "on_screen": "CARROSSEL vs REELS",
+        "best_for": "Comentário. A pessoa já chega com opinião formada, que é justamente a ideia.",
+        "trap": "Não escolher lado. Comparação com final diplomático é vídeo sem final.",
+        "match": "\\b(?:vs\\.?|versus)\\b|\\bdiferen[cç]as?\\s+entre\\b|\\bqual\\s+(?:[eé]\\s+)?(?:o\\s+|a\\s+)?melhor\\b[^.!?]{0,40}\\bou\\b|\\btestei\\s+(?:os dois|as duas|ambos|os tr[eê]s|lado a lado)\\b|\\bn[aã]o\\s+teve\\s+(?:nem\\s+)?compara[cç][aã]o\\b|^\\s*[^\\W\\d_]+(?: [^\\W\\d_]+)? ou [^\\W\\d_]+(?: [^\\W\\d_]+)?[,?]? qual\\b"
+      }
     },
     {
       "id": 18,
@@ -188,7 +349,16 @@
       "on_screen": "WATCH THIS",
       "best_for": "Screen recordings and anything with a visible result. No setup at all, the hand is already moving.",
       "trap": "A result that takes twelve seconds to arrive. If the payoff is slow, cut to it and show the wait afterwards.",
-      "match": "^\\s*watch (?:what|this|me)\\b|^\\s*(?:let me|lemme) show you\\b|^\\s*repeat after me\\b"
+      "match": "^\\s*watch (?:what|this|me)\\b|^\\s*(?:let me|lemme) show you\\b|^\\s*repeat after me\\b",
+      "pt": {
+        "name": "Demo Sem Introdução",
+        "template": "{Começa no meio da ação, já fazendo.} Olha o que isso faz.",
+        "example": "Olha o que acontece quando eu colo a legenda de um concorrente aqui.",
+        "on_screen": "OLHA ISSO",
+        "best_for": "Gravação de tela e qualquer coisa com resultado visível. Nada de introdução, a mão já tá se mexendo.",
+        "trap": "Um resultado que demora doze segundos pra aparecer. Se a recompensa é lenta, corta pra ela e mostra a espera depois.",
+        "match": "^\\s*(?:olha|olhe|veja|assiste|assista)\\s+(?:s[oó]\\s+)?(?:o que|isso|aqui|como|essa|esse)\\b|^\\s*v[eê]\\s+s[oó]\\b|^\\s*(?:deixa|deixe)\\s+eu\\s+te\\s+mostrar\\b|^\\s*(?:vou|vem que eu vou)\\s+te\\s+mostrar\\b|^\\s*repete\\s+comigo\\b"
+      }
     },
     {
       "id": 19,
@@ -198,7 +368,16 @@
       "on_screen": "BEFORE YOU POST AGAIN",
       "best_for": "Urgency that is real. Platform changes, seasonal windows, policy updates.",
       "trap": "Manufactured urgency. One fake deadline and every future one is discounted.",
-      "match": "\\bbefore (?:you|it|they|the)\\b[^.!?]*\\b(?:change|changes|end|ends|close|closes|expires|goes)\\b|\\bchanges on\\b|\\bby 20\\d\\d\\b"
+      "match": "\\bbefore (?:you|it|they|the)\\b[^.!?]*\\b(?:change|changes|end|ends|close|closes|expires|goes)\\b|\\bchanges on\\b|\\bby 20\\d\\d\\b",
+      "pt": {
+        "name": "O Prazo",
+        "template": "{Coisa} muda em {data}. Faz {ação} antes disso.",
+        "example": "Seu grid corta as capas no segundo em que você posta um reels. Arruma as capas antes de postar de novo.",
+        "on_screen": "ANTES DE POSTAR DE NOVO",
+        "best_for": "Urgência que é real. Mudança de plataforma, data sazonal, regra nova.",
+        "trap": "Urgência fabricada. Um prazo falso e todos os próximos perdem o valor.",
+        "match": "\\b(?:mudam?|mudou|vai mudar|acabam?|terminam?|fecham?|expiram?|sai do ar|encerram?)\\b[^.!?]{0,30}\\b(?:dia\\s+\\d+|amanh[aã]|segunda|ter[cç]a|quarta|quinta|sexta|s[aá]bado|domingo|semana que vem|m[eê]s que vem|esse m[eê]s|essa semana|em\\s+(?:\\d+|um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove|dez|onze|doze|quinze|vinte|trinta|quarenta|cinquenta|sessenta|noventa|cem)\\s+dias)\\b|\\bat[eé]\\s+(?:o\\s+)?dia\\s+(?:\\d+|primeiro)\\b|\\bantes\\s+de\\s+(?:voc[eê]\\s+|c[eê]\\s+)?postar\\s+(?:de novo|outro|o pr[oó]ximo)\\b|\\bantes\\s+que\\s+(?:mude|acabe|feche|o instagram)\\b|\\bat[eé]\\s+20\\d\\d\\b|\\bmuda(?:m)? (?:em|no dia|a partir de) (?:janeiro|fevereiro|mar[cç]o|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro|\\d)"
+      }
     },
     {
       "id": 20,
@@ -208,7 +387,16 @@
       "on_screen": "YOU DON'T NEED A NICHE",
       "best_for": "Relief. Very high save rate, because it removes a blocker rather than adding a task.",
       "trap": "Removing the blocker and putting nothing in its place. The second half is the whole video.",
-      "match": "\\byou (?:do not|don'?t|dont) need\\b|\\bstop (?:trying to|worrying about)\\b"
+      "match": "\\byou (?:do not|don'?t|dont) need\\b|\\bstop (?:trying to|worrying about)\\b",
+      "pt": {
+        "name": "Permissão",
+        "template": "Você não precisa de {a coisa que todo mundo diz que você precisa}.",
+        "example": "Você não precisa de um nicho. Você precisa de uma pessoa que você consiga chamar pelo nome.",
+        "on_screen": "VOCÊ NÃO PRECISA DE NICHO",
+        "best_for": "Alívio. Taxa de salvamento muito alta, porque tira um bloqueio em vez de dar mais uma tarefa.",
+        "trap": "Tirar o bloqueio e não colocar nada no lugar. A segunda metade é o vídeo inteiro.",
+        "match": "\\b(?:voc[eê]s?|vc|c[eê]|tu)\\s+n[aã]o\\s+precisa(?:m)?\\b|\\bn[aã]o\\s+precisa\\s+(?:de|ter|ser|estar|saber)\\b|\\bpar[ae]\\s+de\\s+(?:tentar|se preocupar|se cobrar|esperar)\\b"
+      }
     },
     {
       "id": 21,
@@ -218,7 +406,16 @@
       "on_screen": "HE ASKED FOR A REFUND",
       "best_for": "Stories. Starting mid-scene makes the viewer feel they arrived late, which is a reason to stay.",
       "trap": "Never going back to fill in the gap. Deliver the setup by second eight or it reads as a mistake.",
-      "match": "^\\s*(?:\\.\\.\\.|…)|^\\s*(?:and (?:that'?s|that is|then) when|so (?:he|she|they) (?:said|asked))\\b|^\\s*(?:uh|um)\\b"
+      "match": "^\\s*(?:\\.\\.\\.|…)|^\\s*(?:and (?:that'?s|that is|then) when|so (?:he|she|they) (?:said|asked))\\b|^\\s*(?:uh|um)\\b",
+      "pt": {
+        "name": "Começo no Meio da Frase",
+        "template": "{...e foi aí que {a virada}.}",
+        "example": "...e foi aí que o cliente pediu o dinheiro de volta. Três dias depois de aprovar.",
+        "on_screen": "ELE PEDIU REEMBOLSO",
+        "best_for": "Histórias. Começar no meio da cena faz a pessoa sentir que chegou atrasada, e isso é motivo pra ficar.",
+        "trap": "Nunca voltar pra explicar o começo. Entrega o contexto até o oitavo segundo, senão parece erro de edição.",
+        "match": "^\\s*(?:\\.\\.\\.|…)|^\\s*e\\s+(?:foi\\s+)?a[ií]\\s+(?:que|ele|ela|o cara|a cliente|o cliente|eu|a gente)\\b|^\\s*e\\s+foi\\s+(?:nessa hora|a[ií]|quando|ent[aã]o)\\b|^\\s*a[ií]\\s+(?:ele|ela|o cara|a mina|o cliente|a cliente)\\s+(?:\\w+ou|disse|virou|veio|pediu|me)\\b|^\\s*foi\\s+a[ií]\\s+que\\b"
+      }
     },
     {
       "id": 22,
@@ -228,7 +425,16 @@
       "on_screen": "NICE GUYS FINISH FIRST",
       "best_for": "Comments. The viewer has to stop and check whether they misheard you.",
       "trap": "Flipping a saying nobody says. The original has to be a reflex, or the inversion is just a sentence.",
-      "match": "^\\s*[A-Za-z][\\w' ]{2,34}\\b(?:finish|finishes|win|wins|lose|loses|beats?|is|are)\\s+(?:first|last|dead|wrong|right|better|overrated|underrated)\\b"
+      "match": "^\\s*[A-Za-z][\\w' ]{2,34}\\b(?:finish|finishes|win|wins|lose|loses|beats?|is|are)\\s+(?:first|last|dead|wrong|right|better|overrated|underrated)\\b",
+      "pt": {
+        "name": "Virada Contrária",
+        "template": "{Ditado conhecido, ao contrário.}",
+        "example": "Quem espera nunca alcança.",
+        "on_screen": "QUEM ESPERA NUNCA ALCANÇA",
+        "best_for": "Comentário. A pessoa precisa parar pra conferir se ouviu direito.",
+        "trap": "Inverter um ditado que ninguém fala. O original tem que ser automático, senão a inversão vira só uma frase.",
+        "match": "\\bquem\\s+espera\\s+(?:nunca|n[aã]o)\\b|\\bquem\\s+(?:cedo\\s+madruga|n[aã]o\\s+arrisca)\\b[^.!?]{0,25}\\b(?:nunca|n[aã]o|perde|fica)\\b|\\bo\\s+cliente\\s+(?:nem\\s+sempre|n[aã]o)\\s+tem\\s+(?:sempre\\s+)?raz[aã]o\\b|\\bdinheiro\\s+traz\\s+felicidade\\b|\\bmenos\\s+n[aã]o\\s+[eé]\\s+mais\\b|\\bbonzinho?s?\\s+(?:chega|chegam|termina|terminam|ganha|ganham)\\s+(?:em\\s+)?primeiro\\b|^\\s*[\\w' ]{3,30}\\b(?:[eé]|s[aã]o)\\s+(?:superestimad[oa]s?|supervalorizad[oa]s?|balela|furad[oa]|uma armadilha|uma mentira|mentira)\\b"
+      }
     },
     {
       "id": 23,
@@ -238,7 +444,16 @@
       "on_screen": "33% NEVER READ AGAIN",
       "best_for": "Sends. A number a person can repeat at dinner gets sent to somebody.",
       "trap": "A statistic you cannot source. Say where it came from in the video or do not use it.",
-      "match": "^\\s*\\d[\\d,.]*\\s?%|\\b\\d[\\d,.]*\\s?%\\s+of\\b"
+      "match": "^\\s*\\d[\\d,.]*\\s?%|\\b\\d[\\d,.]*\\s?%\\s+of\\b",
+      "pt": {
+        "name": "A Estatística",
+        "template": "{N}% d{o grupo} {fato surpreendente}.",
+        "example": "33% de quem termina o ensino médio nunca mais lê um livro.",
+        "on_screen": "33% NUNCA MAIS LÊ",
+        "best_for": "Envio. Um número que dá pra repetir no almoço de domingo vai ser mandado pra alguém.",
+        "trap": "Estatística sem fonte. Fala de onde veio no vídeo ou não usa.",
+        "match": "^\\s*\\d[\\d,.]*\\s?(?:%|por\\s?cento)|\\b\\d[\\d,.]*\\s?(?:%|por\\s?cento)\\s+d(?:e|os?|as?)\\b|\\b(?:dez|vinte|trinta|quarenta|cinquenta|sessenta|setenta|oitenta|noventa)(?:\\s+e\\s+\\w+)?\\s+por\\s?cento\\s+d(?:e|os?|as?)\\b|\\b(?:\\d+|um|uma|dois|duas|tr[eê]s|quatro|cinco|seis|sete|oito|nove)\\s+(?:em|de)\\s+cada\\s+(?:\\d+|dez|cem)\\b"
+      }
     },
     {
       "id": 24,
@@ -248,7 +463,16 @@
       "on_screen": "THE NEW ONE",
       "best_for": "Anything physical or visual. The object is the hook and the words are captions on it.",
       "trap": "Holding the thing up without saying what it changes. A reveal with no stake is an advert.",
-      "match": "^\\s*(?:so,?\\s+)?(?:this|these|here) (?:is|are)\\s+(?:the\\s+)?(?:new|my new)\\b|^\\s*(?:so,?\\s+)?this (?:new|tiny|little)\\b|^\\s*this \\w+ has (?:the|a)\\b"
+      "match": "^\\s*(?:so,?\\s+)?(?:this|these|here) (?:is|are)\\s+(?:the\\s+)?(?:new|my new)\\b|^\\s*(?:so,?\\s+)?this (?:new|tiny|little)\\b|^\\s*this \\w+ has (?:the|a)\\b",
+      "pt": {
+        "name": "A Revelação",
+        "template": "Esse é o novo {coisa}.",
+        "example": "Essa é a nova câmera compacta da Sony, e ela resolve exatamente o que eu odiava na antiga.",
+        "on_screen": "A NOVA",
+        "best_for": "Qualquer coisa física ou visual. O objeto é o gancho e as palavras são legenda dele.",
+        "trap": "Mostrar a coisa sem dizer o que ela muda. Revelação sem nada em jogo é propaganda.",
+        "match": "^\\s*(?:(?:ent[aã]o|gente|olha|galera),?\\s+)?(?:ess[ea]s?|isso|aqui)\\s+(?:[eé]|s[aã]o|t[aá])\\s+(?:o\\s+|a\\s+|os\\s+|as\\s+)?(?:meu\\s+|minha\\s+)?nov[oa]s?\\b|^\\s*(?:olha|chegou|chegaram)\\s+(?:ess[ea]|o|a|os|as)\\s+nov[oa]s?\\b|^\\s*(?:ess[ea])\\s+(?:nov[oa]|coisinha|aparelhinho)\\b"
+      }
     },
     {
       "id": 25,
@@ -258,7 +482,16 @@
       "on_screen": "1M SUBS IN ONE MONTH",
       "best_for": "Proof when the user does not have their own number yet. Third-person is allowed if it is true.",
       "trap": "No name and no link. An anonymous miracle is a rumour.",
-      "match": "\\bthere (?:was|is) (?:one|a|this)\\b|\\b(?:one|a) (?:guy|girl|creator|student|founder|kid|client|friend) (?:i know |who |that )(?:\\w+ed|grew|made|built|went|took|got|hit)\\b|\\bwe had a new\\b"
+      "match": "\\bthere (?:was|is) (?:one|a|this)\\b|\\b(?:one|a) (?:guy|girl|creator|student|founder|kid|client|friend) (?:i know |who |that )(?:\\w+ed|grew|made|built|went|took|got|hit)\\b|\\bwe had a new\\b",
+      "pt": {
+        "name": "O Resultado de Outra Pessoa",
+        "template": "Teve um {pessoa} que {resultado} em {tempo}.",
+        "example": "Teve um criador que ganhou um milhão de inscritos em um mês só.",
+        "on_screen": "1 MILHÃO EM UM MÊS",
+        "best_for": "Prova quando a pessoa ainda não tem o próprio número. Terceira pessoa vale se for verdade.",
+        "trap": "Sem nome e sem link. Milagre anônimo é boato.",
+        "match": "\\b(?:um|uma|ess[ea])\\s+(?:alun[oa]|cliente|mentorad[oa]|seguidor[a]?|amig[oa]|cara|menina|mina|criador[a]?|garot[oa]|moleque|empres[aá]ri[oa]|dentista|advogad[oa]|nutri|m[eé]dic[oa]|senhora|senhor|influencer)\\s+(?:(?:minha|meu|nossa|nosso|aqui)\\s+)?(?:que\\s+)?(?:\\w+ou|saiu|fez|foi|vendeu|bateu|tirou|ganhou|cresceu|conseguiu)\\b|\\b(?:teve|tinha|tem)\\s+(?:um|uma)\\s+(?:alun[oa]|cliente|mentorad[oa]|cara|menina|criador[a]?)\\b"
+      }
     },
     {
       "id": 26,
@@ -268,7 +501,16 @@
       "on_screen": "THE FASTEST WAY",
       "best_for": "One-claim videos with no story attached. It is the most common shape in the wild and the easiest to write badly.",
       "trap": "A superlative with a soft answer. If the second half is 'consistency', you have said nothing and the comments will tell you.",
-      "match": "^\\s*(?:the\\s+)?(?:fastest|quickest|best|worst|biggest|greatest|easiest|hardest|only|number one|#1|most important)\\s+\\w+|\\bthe (?:fastest|best|worst|biggest|greatest|only) way to\\b"
+      "match": "^\\s*(?:the\\s+)?(?:fastest|quickest|best|worst|biggest|greatest|easiest|hardest|only|number one|#1|most important)\\s+\\w+|\\bthe (?:fastest|best|worst|biggest|greatest|only) way to\\b",
+      "pt": {
+        "name": "O Superlativo",
+        "template": "O {jeito mais rápido / maior / único} de {coisa} é {a resposta}.",
+        "example": "O jeito mais rápido de ganhar confiança é juntar prova que nem você consegue contestar.",
+        "on_screen": "O JEITO MAIS RÁPIDO",
+        "best_for": "Vídeo de uma ideia só, sem história. É o formato mais comum que existe e o mais fácil de fazer mal feito.",
+        "trap": "Superlativo com resposta mole. Se a segunda metade é 'constância', você não disse nada e os comentários vão te avisar.",
+        "match": "^\\s*(?:o|a)\\s+(?:jeito|forma|maneira|caminho)\\s+mais\\s+(?:r[aá]pid[oa]|f[aá]cil|simples|barat[oa]|garantid[oa])\\b|\\b(?:o|a)\\s+(?:melhor|pior|[uú]nic[oa])\\s+(?:jeito|forma|maneira|coisa|estrat[eé]gia|ferramenta|m[eé]todo|investimento|conselho|dica)\\b|^\\s*(?:o|a)\\s+(?:melhor|pior|maior|[uú]nic[oa])\\s+\\w+"
+      }
     }
   ],
   "classify_order": [
