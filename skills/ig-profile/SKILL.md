@@ -1,82 +1,85 @@
 ---
 name: ig-profile
 description: >-
-  Score an Instagram profile out of 100 against a 12-part rubric and rewrite
-  the parts that lose points - name field, bio, link, highlights, pinned three,
-  grid. Use when the user says "optimize my profile", "fix my bio", "score my
-  Instagram", "why don't people follow me", or pastes their profile and asks how
-  it reads.
+  Dá nota de 0 a 100 pra um perfil do Instagram numa rubrica de 12 itens e
+  reescreve as partes que perdem ponto: campo de nome, bio, link, destaques,
+  os três fixados, grade. Use quando o usuário disser "otimiza meu perfil",
+  "arruma minha bio", "dá uma nota pro meu Instagram", "por que ninguém me
+  segue", "minha bio tá boa?", ou colar o perfil e perguntar como ele soa.
 ---
 
 # ig-profile
 
-Almost everybody optimises the wrong thing here. The profile is not a
-storefront people browse. It is a **decision screen**, arrived at from one
-reel, and it gets about three seconds to answer one question: is there more of
-that here, and is it for me.
+Quase todo mundo otimiza a coisa errada aqui. O perfil não é uma vitrine onde
+as pessoas passeiam. É uma **tela de decisão**, onde a pessoa chega vinda de
+um reel, e ele tem uns três segundos pra responder uma pergunta: tem mais
+disso aqui, e isso é pra mim?
 
-## Input
+## Entrada
 
-Ask the user to paste or screenshot: the name field, the handle, the bio, what
-the link points to, the highlight names, what is pinned, and the first nine
-grid covers. A screenshot of the top of the profile plus the first two grid
-rows is enough for a first pass.
+Peça pro usuário colar ou mandar print de: campo de nome, @, bio, pra onde o
+link aponta, nomes dos destaques, o que está fixado e as capas dos nove
+primeiros posts da grade. Um print do topo do perfil mais as duas primeiras
+linhas da grade já bastam pra uma primeira passada.
 
-Do not log into Instagram on their behalf.
+Não faça login no Instagram pelo usuário.
 
-## Score it
+## Dê a nota
 
-Read `rubric.json` in this folder. Twelve items, 100 points, each with what
-full marks looks like and how it usually fails. Score every item, show the
-table, give the total. Be honest. Most profiles land in the 30s and 40s on the
-first pass and a generous score is useless.
+Leia o `rubric.json` nesta pasta. Doze itens, 100 pontos, cada um com como é
+a nota máxima e como ele costuma falhar. Dê nota pra todos os itens, mostre a
+tabela, dê o total. Seja honesto. A maioria dos perfis fica entre 30 e 49 na
+primeira passada, e nota generosa não serve pra nada.
 
 ```
-PROFILE SCORE  38/100
+NOTA DO PERFIL  38/100
 
-  name field       2/12   name only, no words anyone searches
-  bio first line   3/12   three nouns and a coffee emoji
-  pinned three     0/10   nothing pinned
-  highlights       2/8    "Random", "Life", "2023"
-  grid legibility  4/8    six of nine covers are a face mid-sentence
+  campo de nome       2/12   só o nome, nenhuma palavra que alguém busca
+  bio, linha um       3/12   três substantivos e um emoji de café
+  três fixados        0/10   nada fixado
+  destaques           2/8    "Aleatório", "Vida", "2023"
+  leitura da grade    4/8    seis das nove capas são um rosto no meio da fala
   ...
 ```
 
-## Then rewrite, in this order
+## Depois reescreva, nesta ordem
 
-Fix in descending order of points lost. Do not rewrite everything at once, the
-user has to actually go and change each of these.
+Corrija do item que mais perdeu ponto pro que menos perdeu. Não reescreva
+tudo de uma vez: o usuário tem que ir lá e mudar cada uma dessas coisas.
 
-**1. The name field (30 characters).** The bold line under the photo, not the
-handle. This is the field Instagram search matches against, and most accounts
-put a name in it and nothing else. Format that works:
-`{Name} | {what you do, in searched words}`. Give three options.
+**1. O campo de nome (30 caracteres).** A linha em negrito embaixo da foto,
+não o @. É o campo que a busca do Instagram usa pra encontrar a conta, e a
+maioria coloca só um nome nele e mais nada. Formato que funciona:
+`{Nome} | {o que você faz, nas palavras que as pessoas buscam}`. Dê três
+opções.
 
-**2. Bio line one.** Who this is for and what changes. Not a job title, not
-adjectives, not a pipe-separated list of identities. The rest of the 150
-characters carries one piece of proof or one plain offer.
+**2. A primeira linha da bio.** Pra quem é e o que muda pra essa pessoa. Não
+um cargo, não adjetivos, não uma lista de identidades separadas por barra. O
+resto dos 150 caracteres leva uma prova ou uma oferta simples.
 
-**3. The pinned three.** Three slots, three different jobs: the best proof, the
-clearest explanation of the offer, the best introduction to the person. This is
-the highest-leverage fix on the whole profile and it takes four taps. An
-unpinned grid shows whatever was posted last, which is a coin flip.
+**3. Os três fixados.** Três espaços, três trabalhos diferentes: a melhor
+prova, a explicação mais clara da oferta, a melhor apresentação da pessoa. É
+a correção que mais rende no perfil inteiro e leva quatro toques. Uma grade
+sem nada fixado mostra o que foi postado por último, o que é cara ou coroa.
 
-**4. Highlights.** Four to six, named for the questions a buyer asks: Pricing,
-Results, How it works, About. Not "Random". Delete the rest.
+**4. Destaques.** De quatro a seis, com o nome das perguntas que um comprador
+faz: Preço, Resultados, Como funciona, Sobre. Não "Aleatório". Apague o resto.
 
-**5. The link.** One destination that matches what the bio just promised. Five
-are allowed; two is already a menu and a menu converts worse than a door.
+**5. O link.** Um destino que bate com o que a bio acabou de prometer. Dá pra
+colocar cinco; dois já viram um cardápio, e cardápio converte pior que uma
+porta.
 
-**6. Grid covers.** The first nine at thumbnail size. Reel covers get chosen,
-not left as whatever frame one was. Four words of text on a cover makes a grid
-readable in one glance.
+**6. Capas da grade.** As nove primeiras no tamanho de miniatura. Capa de
+reel se escolhe, não fica sendo o primeiro frame que veio. Quatro palavras de
+texto na capa fazem a grade ser lida de uma olhada.
 
-## Output
+## Saída
 
-Score table, then the rewrites as copy-ready blocks in fix-first order, each
-run through `/ig-human`. Re-score at the end and show the delta honestly. If
-the rewrite reaches 84 and not 98, say 84, and say what the rest needs, which
-is usually a grid, a story habit and a pinned post that does not exist yet.
-None of that is a rewrite.
+Tabela de notas, depois as reescritas como blocos prontos pra copiar, na
+ordem do que corrigir primeiro, cada uma passada pelo `/ig-human`. Dê a nota
+de novo no final e mostre a diferença com honestidade. Se a reescrita chegou
+a 84 e não a 98, diga 84, e diga o que falta pro resto, que normalmente é uma
+grade, o hábito de postar story e um post fixado que ainda não existe. Nada
+disso é reescrita.
 
-Nothing is saved to Instagram by this skill. The user edits each field.
+Esta skill não salva nada no Instagram. O usuário edita cada campo.
